@@ -390,14 +390,17 @@ p {
 /* Mobile Navigation */
 .mobile-menu-button {
     display: none;
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #eee;
+    border-radius: 8px;
     cursor: pointer;
-    padding: 1rem;
+    padding: 0.8rem;
     position: fixed;
     top: 1rem;
     right: 1rem;
     z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
 }
 
 .mobile-menu-button span {
@@ -478,13 +481,19 @@ p {
         font-size: 0.9rem;
     }
 
+    /* Hide floating button on home page only on mobile */
+    .home-page .floating-button {
+        display: none;
+    }
+
     main {
         padding: 1rem;
+        padding-top: 4rem; /* Add space for hamburger menu */
     }
 
     .header h1 {
         font-size: 1.8rem;
-        margin-top: 3rem;
+        margin-top: 1rem; /* Reduced since we added padding-top to main */
     }
 
     .service-description {
