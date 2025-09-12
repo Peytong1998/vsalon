@@ -3,8 +3,8 @@ import http.server
 import socketserver
 import os
 
-# Set the port to 5000 as required by Replit
-PORT = 5000
+# Set the port - use environment variable for deployment, fallback to 5000 for dev
+PORT = int(os.getenv("PORT", 5000))
 HOST = "0.0.0.0"  # Bind to all interfaces to work with Replit's proxy
 
 # Change to the directory containing the HTML files
@@ -18,7 +18,10 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header('Expires', '0')
         super().end_headers()
 
-with socketserver.TCPServer((HOST, PORT), CustomHTTPRequestHandler) as httpd:
+class ReusableTCPServer(socketserver.TCPServer):
+    allow_reuse_address = True
+
+with ReusableTCPServer((HOST, PORT), CustomHTTPRequestHandler) as httpd:
     print(f"Server running at http://{HOST}:{PORT}/")
     print("Press Ctrl+C to stop the server")
     httpd.serve_forever()
