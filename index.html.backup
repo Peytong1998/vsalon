@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Salon - Home</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coloring.html">Coloring</a></li>
+            <li><a href="styling.html">Styling</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+        </ul>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coloring.html">Coloring</a></li>
+            <li><a href="styling.html">Styling</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="header">
+            <h1>V SALON STUDIO</h1>
+        </header>
+
+        <section class="carousel">
+            <div class="carousel-placeholder">
+                <p>Instagram Feed Carousel Coming Soon</p>
+                <p>This space will display your latest Instagram posts</p>
+            </div>
+        </section>
+
+        <a href="tel:2248409859" class="cta-button">Book Now</a>
+
+        <section class="personal-note">
+            <div class="salutation">Hi Babes <3</div>
+            <div class="note-content">
+                <p>I'm Vanessa! I've been in the industry for 8 years! I opened my Salon Suite in May of 2023. I love all things hair! I specialize in blondes and lived-in colors, as well as many different styles of haircuts. My goal is to continue to grow as a person and a stylist. Most importantly I want to make you feel comfortable and beautiful. With that being said, I'm always up for a change! I want to be more than a "hairstylist" to you. I'll always be an ear to listen, a friend to laugh with, and a shoulder to cry on.</p>
+            </div>
+            <div class="signature">Vanessa</div>
+        </section>
+
+        <section class="salon-info">
+            <div class="salon-details">
+                <div class="info-group">
+                    <h3>Address</h3>
+                    <p>2255 Randall Rd<br>Carpentersville, IL 60110</p>
+                </div>
+                <div class="info-group">
+                    <h3>Open</h3>
+                    <p>Tuesday – Saturday</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.155123456789!2d-88.2578!3d42.1214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880f123456789abc%3A0x1234567890abcdef!2s2255%20Randall%20Rd%2C%20Carpentersville%2C%20IL%2060110!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <section class="policies">
+            <div class="policy-card">
+                <h3>Cancellation Policies</h3>
+                <p>Please let me know 24 hours in advance if you need to cancel or reschedule your appointment. Cancellations within 24 hours will result in a 50% fee, payable at the time of cancellation.</p>
+            </div>
+            <div class="policy-card">
+                <h3>No-Call, No-Show</h3>
+                <p>I understand that life can get busy, but please remember that a no call, no show means missed opportunities for both you and I. In the event of a no call, no show, you'll be charged 100% of the service total. This fee is due on the day of the missed appointment to ensure fairness to myself and other clients.</p>
+            </div>
+        </section>
+
+        <div class="policy-note">
+            <p>Your cooperation helps me keep the salon running smoothly for everyone!</p>
+            <p>Thank you for understanding. I look forward to seeing you in my chair!</p>
+        </div>
+    </main>
+
+    <!-- Floating Book Now Button -->
+    <a href="tel:2248409859" class="floating-button">Book Now</a>
+
+    <footer>
+        <p>V SALON STUDIO</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 
