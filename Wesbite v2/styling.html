@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Salon - Styling</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coloring.html">Coloring</a></li>
+            <li><a href="styling.html" class="active">Styling</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+        </ul>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coloring.html">Coloring</a></li>
+            <li><a href="styling.html" class="active">Styling</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="header">
+            <h1>Styling Services</h1>
+        </header>
+
+        <section class="services-section">
+            <div class="service-item">
+                <div class="service-title">
+                    <span>WOMEN'S HAIRCUT</span>
+                    <span class="service-price">$85</span>
+                </div>
+                <p class="service-description">Trim it or change it!</p>
+                <p class="service-note">This service includes a wash, cut, and style.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-title">
+                    <span>THERMAL STYLE</span>
+                    <span class="service-price">$70</span>
+                </div>
+                <p class="service-description">Want to feel good AND look good?</p>
+                <p class="service-note">This service includes a wash, blowout, and curls.</p>
+            </div>
+
+            <div class="service-item">
+                <div class="service-title">
+                    <span>MEN'S CUT</span>
+                    <span class="service-price">$48</span>
+                </div>
+                <p class="service-note">No longer accepting new male clients.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Book Now Button -->
+    <a href="tel:2248409859" class="floating-button">Book Now</a>
+
+    <footer>
+        <p>V SALON STUDIO</p>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html> 
