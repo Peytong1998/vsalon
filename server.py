@@ -7,8 +7,10 @@ import os
 PORT = int(os.getenv("PORT", 5000))
 HOST = "0.0.0.0"  # Bind to all interfaces to work with Replit's proxy
 
-# Change to the directory containing the HTML files
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
+# Change to the Wesbite v2 directory containing the HTML files
+script_dir = os.path.dirname(os.path.abspath(__file__))
+wesbite_v2_dir = os.path.join(script_dir, "Wesbite v2")
+os.chdir(wesbite_v2_dir)
 
 class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
