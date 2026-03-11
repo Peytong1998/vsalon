@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V Salon - Education</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        .education-intro {
+            max-width: 780px;
+            margin: 0 auto 3rem;
+            text-align: center;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        .education-intro p {
+            margin-bottom: 1.4rem;
+        }
+
+        .what-youll-gain {
+            max-width: 780px;
+            margin: 0 auto 3rem;
+            padding: 2rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        .what-youll-gain h2 {
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.2rem;
+        }
+
+        .what-youll-gain ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .what-youll-gain ul li {
+            padding: 0.4rem 0;
+            padding-left: 1.4rem;
+            position: relative;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .what-youll-gain ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: black;
+            font-size: 1.1rem;
+        }
+
+        .options-section {
+            max-width: 780px;
+            margin: 0 auto 4rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .option-card {
+            padding: 2rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .option-card h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .option-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .option-price {
+            font-size: 1.6rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .options-section {
+                grid-template-columns: 1fr;
+            }
+
+            .what-youll-gain h2 {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-button">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coloring.html">Coloring</a></li>
+            <li><a href="styling.html">Styling</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+        </ul>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="coloring.html">Coloring</a></li>
+            <li><a href="styling.html">Styling</a></li>
+            <li><a href="extensions.html">Extensions</a></li>
+            <li><a href="treatments.html">Treatments</a></li>
+            <li><a href="education.html" class="active">Education</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header class="header">
+            <h1>Behind the Chair with Vanessa</h1>
+            <hr style="width: 60px; border: none; border-top: 1px solid #ccc; margin: 2.8rem auto 0;">
+        </header>
+
+        <section class="services-section">
+            <div class="education-intro">
+                <p>Are you a stylist looking to grow your confidence behind the chair and see how another professional runs their day? Behind the chair with me is a one on one experience where you will observe real client appointments from start to finish.</p>
+                <p>During this experience, you'll get an inside look at consultations, formulation decisions, application techniques, styling, and how I manage my workflow and client experience throughout the day. This is a great opportunity to ask questions, gain new insights, and learn practical techniques you can take back to your own chair.</p>
+                <p>This experience is perfect for licensed stylists or cosmetology students who want to refine their skills, learn new approaches, and see how a full day behind the chair operates in a real salon environment.</p>
+            </div>
+
+            <div class="what-youll-gain">
+                <h2>What you'll gain</h2>
+                <ul>
+                    <li>Real-time observation of client services</li>
+                    <li>Insight into consultations and color formulation</li>
+                    <li>Foiling techniques and placement</li>
+                    <li>Business and workflow tips from behind the chair</li>
+                    <li>Opportunity to ask questions throughout the day</li>
+                    <li>A goodie bag of my salon favorites</li>
+                </ul>
+            </div>
+
+            <div class="options-section">
+                <div class="option-card">
+                    <h3>Option 1</h3>
+                    <div class="option-label">1-Day Stylist Mentorship</div>
+                    <div class="option-price">$300</div>
+                </div>
+                <div class="option-card">
+                    <h3>Option 2</h3>
+                    <div class="option-label">½-Day Stylist Mentorship</div>
+                    <div class="option-price">$150</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Book Now Button -->
+    <a href="tel:2248409859" class="floating-button">Book Now</a>
+
+    <footer>
+        <p>V SALON STUDIO</p>
+    </footer>
+
+    <script>
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuButton.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
